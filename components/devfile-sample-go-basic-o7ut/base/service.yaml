@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-go-basic-o7ut
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-go-basic-o7ut
+    app.kubernetes.io/part-of: my-app-1
+  name: devfile-sample-go-basic-o7ut
+  namespace: abhindas-tenant
+spec:
+  ports:
+  - port: 8079
+    targetPort: 8079
+  selector:
+    app.kubernetes.io/instance: devfile-sample-go-basic-o7ut
+status:
+  loadBalancer: {}
